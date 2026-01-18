@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KverSProject - Celulares</title>
+  <link rel="stylesheet" href="colorcelular.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Anuncio Superior -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <div class="announcement-badge">NUEVO</div>
+      <div class="announcement-text">¡Juegos para celulares optimizados al máximo rendimiento!</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-main">
+    <div class="header-container">
+      <div class="logo-section">
+        <div class="logo-container">
+          <img src="FOTOS/kversLogo.png" alt="Logo KverSProject">
+        </div>
+        <div class="logo-text">
+          <h1>KverSProject</h1>
+          <span>by Kvers (Adrian)</span>
+        </div>
+      </div>
+
+      <nav class="nav-main" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="emuladores.html"><i class="fas fa-cogs"></i> Emuladores</a></li>
+          <li><a href="celular.html" class="activo"><i class="fas fa-mobile-alt"></i> Celulares</a></li>
+          <li><a href="juego.html"><i class="fas fa-gamepad"></i> Juegos PC</a></li>
+          <li><a href="programas.html"><i class="fas fa-laptop-code"></i> Programas</a></li>
+          <li><a href="extra.html"><i class="fas fa-plus-circle"></i> Extra</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner Principal -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1><i class="fas fa-mobile-alt"></i> JUEGOS PARA CELULARES</h1>
+      <p>APKs optimizadas y verificadas para Android. Máximo rendimiento, mínimo consumo.</p>
+      <div class="banner-stats">
+        <div class="stat">
+          <i class="fas fa-download"></i>
+          <span>100% Funcionales</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-shield-alt"></i>
+          <span>Sin Virus</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-bolt"></i>
+          <span>Optimizadas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros de Categorías -->
+  <section class="filters-section">
+    <div class="filters-container">
+      <h2><i class="fas fa-filter"></i> Filtrar por Categoría</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="action">Acción</button>
+        <button class="filter-btn" data-filter="arcade">Arcade</button>
+        <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+        <button class="filter-btn" data-filter="strategy">Estrategia</button>
+        <button class="filter-btn" data-filter="offline">Sin Internet</button>
+      </div>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="gameSearch" placeholder="Buscar juego...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor de Juegos -->
+  <main class="games-container">
+    <div class="games-grid">
+      <!-- Juego 1: BALATRO -->
+      <div class="game-card" data-category="puzzle" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge">POPULAR</span>
+          <span class="game-size">85 MB</span>
+        </div>
+        <div class="game-icon">
+          <i class="fas fa-dice"></i>
+        </div>
+        <h3 class="game-title">BALATRO</h3>
+        <p class="game-description">Juego de póker roguelike adictivo. Versión MOD con recursos ilimitados.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.7</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2024</span>
+          <span><i class="fas fa-download"></i> 500K+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('1')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+
+      <!-- Juego 2: GEOMETRY DASH -->
+      <div class="game-card" data-category="arcade" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #9b5de5;">CLÁSICO</span>
+          <span class="game-size">92 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF6B6B, #4ECDC4);">
+          <i class="fas fa-running"></i>
+        </div>
+        <h3 class="game-title">GEOMETRY DASH</h3>
+        <p class="game-description">Juego de ritmo y plataformas. Versión completa con todos los niveles desbloqueados.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2013</span>
+          <span><i class="fas fa-download"></i> 1M+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('2')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+
+      <!-- Juego 3: FNAF 1 -->
+      <div class="game-card" data-category="action" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #f15bb5;">TERROR</span>
+          <span class="game-size">78 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #7209B7, #3A0CA3);">
+          <i class="fas fa-ghost"></i>
+        </div>
+        <h3 class="game-title">FIVE NIGHTS AT FREDDY'S 1</h3>
+        <p class="game-description">Juego de terror y supervivencia. Versión optimizada para móviles.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.2</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2014</span>
+          <span><i class="fas fa-download"></i> 750K+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('3')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+
+      <!-- Juego 4: MINECRAFT PE -->
+      <div class="game-card" data-category="strategy offline" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #00bbf9;">PREMIUM</span>
+          <span class="game-size">145 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #00BBF9, #00F5D4);">
+          <i class="fas fa-cube"></i>
+        </div>
+        <h3 class="game-title">MINECRAFT PE</h3>
+        <p class="game-description">Edición Pocket completa. Sin conexión, con mods preinstalados.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2024</span>
+          <span><i class="fas fa-download"></i> 2M+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('4')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+
+      <!-- Juego 5: STUMBLE GUYS -->
+      <div class="game-card" data-category="action arcade" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #f72585;">MULTIJUGADOR</span>
+          <span class="game-size">210 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #F72585, #B5179E);">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="game-title">STUMBLE GUYS</h3>
+        <p class="game-description">Battle royale multijugador. Mod con gemas y skins ilimitadas.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.3</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2021</span>
+          <span><i class="fas fa-download"></i> 1.5M+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('5')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+
+      <!-- Juego 6: TERRARIA -->
+      <div class="game-card" data-category="strategy offline" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #ff9e00;">SANDOX</span>
+          <span class="game-size">250 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF9E00, #FF6D00);">
+          <i class="fas fa-mountain"></i>
+        </div>
+        <h3 class="game-title">TERRARIA</h3>
+        <p class="game-description">Aventura sandbox 2D. Versión completa con todos los items desbloqueados.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2023</span>
+          <span><i class="fas fa-download"></i> 900K+</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('6')">
+          <i class="fas fa-download"></i> DESCARGAR APK
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Instrucciones de Instalación -->
+  <section class="instructions-section">
+    <div class="instructions-container">
+      <h2><i class="fas fa-info-circle"></i> ¿Cómo Instalar APKs?</h2>
+      <div class="instructions-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Descargar APK</h3>
+          <p>Haz clic en "DESCARGAR APK" y elige tu servidor preferido.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Permitir Orígenes Desconocidos</h3>
+          <p>Ve a Ajustes > Seguridad > Activar "Orígenes desconocidos".</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Instalar</h3>
+          <p>Abre el archivo APK descargado y sigue las instrucciones.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>¡Jugar!</h3>
+          <p>Abre el juego desde tu menú de aplicaciones y disfruta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Descarga -->
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-download"></i> DESCARGAR APK</h3>
+        <button class="modal-close" onclick="cerrarModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="game-modal-info">
+          <div class="modal-game-icon" id="modalGameIcon">
+            <i class="fas fa-dice"></i>
+          </div>
+          <div>
+            <h4 id="modalGameTitle">BALATRO</h4>
+            <p id="modalGameDescription">Versión MOD con recursos ilimitados</p>
+          </div>
+        </div>
+        
+        <div class="download-options">
+          <a id="linkMega" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-mega"></i>
+              <div>
+                <strong>MEGA</strong>
+                <span class="size">Alta velocidad</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkMediafire" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fas fa-cloud-download-alt"></i>
+              <div>
+                <strong>MediaFire</strong>
+                <span class="size">Sin límites</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkDrive" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-google-drive"></i>
+              <div>
+                <strong>Google Drive</strong>
+                <span class="size">Directo</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+        </div>
+        
+        <div class="modal-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Desactiva Play Protect antes de instalar. Los APKs son 100% seguros y verificados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="social-section">
+    <h3>Síguenos para más juegos</h3>
+    <div class="social-grid">
+      <a href="https://discord.gg/rTmJSh4S" target="_blank" class="social-icon social-discord">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/51913550781" target="_blank" class="social-icon social-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579314076255" target="_blank" class="social-icon social-facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/dian_estampados" target="_blank" class="social-icon social-instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="FOTOS/kversLogo.png" alt="KverSProject Logo">
+        <div class="footer-text">
+          <h4>KverSProject - Celulares</h4>
+          <p>by Kvers (Adrian)</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="#modal" onclick="abrirModal('1')">Descargas</a>
+        <a href="https://discord.gg/rTmJSh4S" target="_blank">Soporte</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 KverSProject | Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <script src="linkcelular.js"></script>
+  <script>
+    // Menú móvil
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('main-nav').classList.toggle('active');
+    });
+
+    // Filtrado de juegos
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remover activo de todos los botones
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Activar el botón clickeado
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        const games = document.querySelectorAll('.game-card');
+        
+        games.forEach(game => {
+          if (filter === 'all' || game.getAttribute('data-category').includes(filter)) {
+            game.style.display = 'block';
+            setTimeout(() => {
+              game.style.opacity = '1';
+              game.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            game.style.opacity = '0';
+            game.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              game.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Búsqueda de juegos
+    document.getElementById('gameSearch').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const games = document.querySelectorAll('.game-card');
+      
+      games.forEach(game => {
+        const title = game.querySelector('.game-title').textContent.toLowerCase();
+        const description = game.querySelector('.game-description').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+          game.style.display = 'block';
+          setTimeout(() => {
+            game.style.opacity = '1';
+            game.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          game.style.opacity = '0';
+          game.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            game.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+
+    // Animación de entrada de tarjetas
+    document.addEventListener('DOMContentLoaded', function() {
+      const games = document.querySelectorAll('.game-card');
+      games.forEach((game, index) => {
+        setTimeout(() => {
+          game.style.opacity = '1';
+          game.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('downloadModal');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    });
+  </script>
+</body>
+</html>

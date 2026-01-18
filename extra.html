@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KverSProject - Extra</title>
+  <link rel="stylesheet" href="extra.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Anuncio Superior -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <div class="announcement-badge">EXTRAS</div>
+      <div class="announcement-text">¡Iconos, fondos, cursos y recursos exclusivos para tu PC!</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-main">
+    <div class="header-container">
+      <div class="logo-section">
+        <div class="logo-container">
+          <img src="FOTOS/kversLogo.png" alt="Logo KverSProject">
+        </div>
+        <div class="logo-text">
+          <h1>KverSProject</h1>
+          <span>by Kvers (Adrian)</span>
+        </div>
+      </div>
+
+      <nav class="nav-main" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="emuladores.html"><i class="fas fa-cogs"></i> Emuladores</a></li>
+          <li><a href="celular.html"><i class="fas fa-mobile-alt"></i> Celulares</a></li>
+          <li><a href="juego.html"><i class="fas fa-gamepad"></i> Juegos PC</a></li>
+          <li><a href="programas.html"><i class="fas fa-laptop-code"></i> Programas</a></li>
+          <li><a href="extra.html" class="activo"><i class="fas fa-plus-circle"></i> Extra</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner Principal -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1><i class="fas fa-plus-circle"></i> EXTRAS PARA PC</h1>
+      <p>Iconos personalizados, fondos animados, cursos y recursos exclusivos para mejorar tu experiencia.</p>
+      <div class="banner-stats">
+        <div class="stat">
+          <i class="fas fa-icons"></i>
+          <span>Iconos</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-image"></i>
+          <span>Fondos HD</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Cursos</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-font"></i>
+          <span>Fuentes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="categories-section">
+    <div class="categories-container">
+      <h2><i class="fas fa-filter"></i> Tipos de Extras</h2>
+      <div class="categories-grid">
+        <div class="category-card" data-category="iconos">
+          <div class="category-icon">
+            <i class="fas fa-icons"></i>
+          </div>
+          <h3>Pack de Iconos</h3>
+          <p>Personaliza tu escritorio con iconos de estilo gamer</p>
+        </div>
+        <div class="category-card" data-category="cursos">
+          <div class="category-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Cursos</h3>
+          <p>Aprende a crear mods y personalizar tu PC</p>
+        </div>
+        <div class="category-card" data-category="fondos">
+          <div class="category-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h3>Fondos HD</h3>
+          <p>Fondos animados y wallpapers de alta calidad</p>
+        </div>
+        <div class="category-card" data-category="fuentes">
+          <div class="category-icon">
+            <i class="fas fa-font"></i>
+          </div>
+          <h3>Fuentes</h3>
+          <p>Tipografías especiales para diseño y gaming</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor de Extras -->
+  <main class="extras-container">
+    <div class="extras-grid">
+      <!-- Pack de Iconos -->
+      <div class="extra-card" data-category="iconos">
+        <div class="extra-card-header">
+          <span class="extra-badge">ICONOS</span>
+          <span class="extra-size">25 MB</span>
+        </div>
+        <div class="extra-icon">
+          <i class="fas fa-icons"></i>
+        </div>
+        <h3 class="extra-title">PACK DE ICONOS GAMER</h3>
+        <p class="extra-description">Colección completa de iconos personalizados para tu escritorio Windows. Estilo gaming y moderno.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-palette"></i> Variedad de estilos</span>
+          <span><i class="fas fa-download"></i> Fácil instalación</span>
+          <span><i class="fas fa-expand-alt"></i> Escalables</span>
+          <span><i class="fas fa-cogs"></i> Compatibles</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 25 MB</span>
+          <span><i class="fas fa-windows"></i> Windows 10/11</span>
+          <span><i class="fas fa-check-circle"></i> 100% seguro</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('iconos')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Curso Minecraft Mods -->
+      <div class="extra-card" data-category="cursos">
+        <div class="extra-card-header">
+          <span class="extra-badge" style="background: #9b5de5;">CURSO</span>
+          <span class="extra-size">850 MB</span>
+        </div>
+        <div class="extra-icon" style="background: linear-gradient(135deg, #FF6B6B, #4ECDC4);">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3 class="extra-title">CURSO BÁSICO DE MINECRAFT MODS</h3>
+        <p class="extra-description">Aprende desde cero a crear y modificar mods para Minecraft. Tutorial paso a paso.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-video"></i> Video tutoriales</span>
+          <span><i class="fas fa-file-code"></i> Código fuente</span>
+          <span><i class="fas fa-book"></i> PDF guía</span>
+          <span><i class="fas fa-tools"></i> Herramientas</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 850 MB</span>
+          <span><i class="fas fa-clock"></i> 5 horas</span>
+          <span><i class="fas fa-user-graduate"></i> Nivel básico</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('curso')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Fondos HD -->
+      <div class="extra-card" data-category="fondos">
+        <div class="extra-card-header">
+          <span class="extra-badge" style="background: #f15bb5;">FONDOS</span>
+          <span class="extra-size">1.2 GB</span>
+        </div>
+        <div class="extra-icon" style="background: linear-gradient(135deg, #7209B7, #3A0CA3);">
+          <i class="fas fa-image"></i>
+        </div>
+        <h3 class="extra-title">FONDOS HD GAMER ANIMADOS</h3>
+        <p class="extra-description">Colección de wallpapers animados y estáticos en 4K/HD para PC. Variedad de estilos.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-play-circle"></i> Animados</span>
+          <span><i class="fas fa-tv"></i> 4K/HD</span>
+          <span><i class="fas fa-layer-group"></i> +100 fondos</span>
+          <span><i class="fas fa-desktop"></i> Multi-pantalla</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 1.2 GB</span>
+          <span><i class="fas fa-expand"></i> 4K máxima</span>
+          <span><i class="fas fa-windows"></i> Wallpaper Engine</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('fondos')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Fuentes -->
+      <div class="extra-card" data-category="fuentes">
+        <div class="extra-card-header">
+          <span class="extra-badge" style="background: #00bbf9;">FUENTES</span>
+          <span class="extra-size">180 MB</span>
+        </div>
+        <div class="extra-icon" style="background: linear-gradient(135deg, #00BBF9, #00F5D4);">
+          <i class="fas fa-font"></i>
+        </div>
+        <h3 class="extra-title">PAQUETE DE FUENTES GAMER</h3>
+        <p class="extra-description">Colección de tipografías especiales para diseño, streaming y contenido gaming.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-typo3"></i> Varios estilos</span>
+          <span><i class="fas fa-paint-brush"></i> Diseño único</span>
+          <span><i class="fas fa-language"></i> Soporte UTF-8</span>
+          <span><i class="fas fa-copyright"></i> Libre uso</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 180 MB</span>
+          <span><i class="fas fa-file-alt"></i> +50 fuentes</span>
+          <span><i class="fas fa-windows"></i> Windows/Mac</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('fuentes')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Herramientas de Personalización -->
+      <div class="extra-card" data-category="iconos">
+        <div class="extra-card-header">
+          <span class="extra-badge" style="background: #f72585;">HERRAMIENTAS</span>
+          <span class="extra-size">45 MB</span>
+        </div>
+        <div class="extra-icon" style="background: linear-gradient(135deg, #F72585, #B5179E);">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3 class="extra-title">HERRAMIENTAS DE PERSONALIZACIÓN</h3>
+        <p class="extra-description">Software para cambiar iconos, temas y personalizar completamente Windows.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-desktop"></i> Temas completos</span>
+          <span><i class="fas fa-mouse-pointer"></i> Cursor personalizado</span>
+          <span><i class="fas fa-window-restore"></i> Skin ventanas</span>
+          <span><i class="fas fa-cog"></i> Configuración</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 45 MB</span>
+          <span><i class="fas fa-windows"></i> Windows 10/11</span>
+          <span><i class="fas fa-shield-alt"></i> Seguro</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('herramientas')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Sound Packs -->
+      <div class="extra-card" data-category="fondos">
+        <div class="extra-card-header">
+          <span class="extra-badge" style="background: #ff9e00;">SONIDOS</span>
+          <span class="extra-size">320 MB</span>
+        </div>
+        <div class="extra-icon" style="background: linear-gradient(135deg, #FF9E00, #FF6D00);">
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <h3 class="extra-title">PACK DE SONIDOS DEL SISTEMA</h3>
+        <p class="extra-description">Efectos de sonido personalizados para notificaciones, inicio y eventos de Windows.</p>
+        <div class="extra-features">
+          <span><i class="fas fa-music"></i> Efectos únicos</span>
+          <span><i class="fas fa-wave-square"></i> Alta calidad</span>
+          <span><i class="fas fa-folder"></i> Organizado</span>
+          <span><i class="fas fa-sliders-h"></i> Fácil uso</span>
+        </div>
+        <div class="extra-info">
+          <span><i class="fas fa-hdd"></i> 320 MB</span>
+          <span><i class="fas fa-file-audio"></i> WAV/MP3</span>
+          <span><i class="fas fa-windows"></i> Compatible</span>
+        </div>
+        <button class="extra-btn" onclick="abrirModal('sonidos')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Guía de Instalación -->
+  <section class="guide-section">
+    <div class="guide-container">
+      <h2><i class="fas fa-book"></i> Guía de Instalación de Extras</h2>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-number">1</div>
+          <h3>Descargar archivo</h3>
+          <p>Selecciona tu servidor preferido (MEGA, MediaFire o Drive)</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">2</div>
+          <h3>Extraer contenido</h3>
+          <p>Usa WinRAR o 7-Zip para descomprimir los archivos</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">3</div>
+          <h3>Seguir instrucciones</h3>
+          <p>Cada pack incluye un archivo README con pasos detallados</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">4</div>
+          <h3>Personalizar</h3>
+          <p>Aplica los iconos, fondos o fuentes según tus preferencias</p>
+        </div>
+      </div>
+      <div class="guide-tips">
+        <h3><i class="fas fa-lightbulb"></i> Consejos para Personalización</h3>
+        <ul>
+          <li><strong>Crea puntos de restauración</strong> antes de cambiar system files</li>
+          <li><strong>Haz copias de seguridad</strong> de tus archivos originales</li>
+          <li><strong>Prueba en modo portable</strong> primero si es posible</li>
+          <li><strong>Revisa la compatibilidad</strong> con tu versión de Windows</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Descarga -->
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-download"></i> DESCARGAR EXTRA</h3>
+        <button class="modal-close" onclick="cerrarModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="extra-modal-info">
+          <div class="modal-extra-icon" id="modalExtraIcon">
+            <i class="fas fa-icons"></i>
+          </div>
+          <div>
+            <h4 id="modalExtraTitle">PACK DE ICONOS GAMER</h4>
+            <p id="modalExtraDescription">Colección completa de iconos personalizados para tu escritorio Windows</p>
+            <div class="modal-extra-details">
+              <span><i class="fas fa-hdd"></i> <strong>Tamaño:</strong> <span id="modalExtraSize">25 MB</span></span>
+              <span><i class="fas fa-windows"></i> <strong>Sistema:</strong> <span id="modalExtraSystem">Windows 10/11</span></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="download-options">
+          <a id="linkMega" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-mega"></i>
+              <div>
+                <strong>MEGA</strong>
+                <span class="size">Alta velocidad</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkMediafire" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fas fa-cloud-download-alt"></i>
+              <div>
+                <strong>MediaFire</strong>
+                <span class="size">Sin límites</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkDrive" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-google-drive"></i>
+              <div>
+                <strong>Google Drive</strong>
+                <span class="size">Directo</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+        </div>
+        
+        <div class="modal-instructions">
+          <h4><i class="fas fa-list-check"></i> Instrucciones de Instalación</h4>
+          <ul id="modalInstructions">
+            <li>Descomprimir el archivo con WinRAR o 7-Zip</li>
+            <li>Abrir la carpeta "Instalación"</li>
+            <li>Ejecutar el archivo "Setup.exe" como administrador</li>
+            <li>Seguir el asistente de instalación</li>
+            <li>Reiniciar el explorador de Windows</li>
+          </ul>
+        </div>
+        
+        <div class="modal-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p><strong>IMPORTANTE:</strong> Recomendamos crear un punto de restauración del sistema antes de instalar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="social-section">
+    <h3>Soporte y Comunidad</h3>
+    <p>¿Problemas con la instalación? Únete a nuestra comunidad</p>
+    <div class="social-grid">
+      <a href="https://discord.gg/rTmJSh4S" target="_blank" class="social-icon social-discord">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/51913550781" target="_blank" class="social-icon social-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579314076255" target="_blank" class="social-icon social-facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/dian_estampados" target="_blank" class="social-icon social-instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="FOTOS/kversLogo.png" alt="KverSProject Logo">
+        <div class="footer-text">
+          <h4>KverSProject - Extras</h4>
+          <p>by Kvers (Adrian)</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="#modal" onclick="abrirModal('iconos')">Descargas</a>
+        <a href="https://discord.gg/rTmJSh4S" target="_blank">Soporte</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 KverSProject | Extras para personalización de PC
+      </div>
+    </div>
+  </footer>
+
+  <script src="linkextra.js"></script>
+  <script>
+    // Menú móvil
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('main-nav').classList.toggle('active');
+    });
+
+    // Filtrado por categoría
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        const extras = document.querySelectorAll('.extra-card');
+        
+        // Remover activo de todas las categorías
+        document.querySelectorAll('.category-card').forEach(c => {
+          c.classList.remove('active');
+        });
+        
+        // Activar categoría clickeada
+        this.classList.add('active');
+        
+        extras.forEach(extra => {
+          if (category === 'all' || extra.getAttribute('data-category').includes(category)) {
+            extra.style.display = 'block';
+            setTimeout(() => {
+              extra.style.opacity = '1';
+              extra.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            extra.style.opacity = '0';
+            extra.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              extra.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Animación de entrada de tarjetas
+    document.addEventListener('DOMContentLoaded', function() {
+      const extras = document.querySelectorAll('.extra-card');
+      extras.forEach((extra, index) => {
+        setTimeout(() => {
+          extra.style.opacity = '1';
+          extra.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('downloadModal');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    });
+
+    // Datos de los extras
+    const extrasData = {
+      'iconos': {
+        title: 'PACK DE ICONOS GAMER',
+        description: 'Colección completa de iconos personalizados para tu escritorio Windows. Estilo gaming y moderno.',
+        size: '25 MB',
+        system: 'Windows 10/11',
+        icon: 'fas fa-icons',
+        color: 'linear-gradient(135deg, var(--primary-color), var(--primary-dark))',
+        instructions: [
+          'Descomprimir el archivo con WinRAR o 7-Zip',
+          'Abrir la carpeta "Iconos"',
+          'Ejecutar "IconInstaller.exe" como administrador',
+          'Seleccionar los iconos a cambiar',
+          'Aplicar cambios y reiniciar explorador'
+        ]
+      },
+      'curso': {
+        title: 'CURSO BÁSICO DE MINECRAFT MODS',
+        description: 'Aprende desde cero a crear y modificar mods para Minecraft. Tutorial paso a paso.',
+        size: '850 MB',
+        system: 'Windows 7+ (Java requerido)',
+        icon: 'fas fa-graduation-cap',
+        color: 'linear-gradient(135deg, #FF6B6B, #4ECDC4)',
+        instructions: [
+          'Descomprimir el archivo',
+          'Abrir carpeta "Curso Minecraft Mods"',
+          'Ver video introductorio "00-Introduccion.mp4"',
+          'Seguir los tutoriales en orden',
+          'Instalar Java y Minecraft Forge'
+        ]
+      },
+      'fondos': {
+        title: 'FONDOS HD GAMER ANIMADOS',
+        description: 'Colección de wallpapers animados y estáticos en 4K/HD para PC. Variedad de estilos.',
+        size: '1.2 GB',
+        system: 'Windows 10/11 (Wallpaper Engine recomendado)',
+        icon: 'fas fa-image',
+        color: 'linear-gradient(135deg, #7209B7, #3A0CA3)',
+        instructions: [
+          'Descomprimir el archivo',
+          'Para fondos estáticos: copiar a "Imágenes"',
+          'Para fondos animados: importar en Wallpaper Engine',
+          'Configurar slideshow si se desea',
+          'Ajustar calidad según rendimiento'
+        ]
+      },
+      'fuentes': {
+        title: 'PAQUETE DE FUENTES GAMER',
+        description: 'Colección de tipografías especiales para diseño, streaming y contenido gaming.',
+        size: '180 MB',
+        system: 'Windows 7/8/10/11, macOS',
+        icon: 'fas fa-font',
+        color: 'linear-gradient(135deg, #00BBF9, #00F5D4)',
+        instructions: [
+          'Descomprimir el archivo',
+          'Seleccionar todas las fuentes (.ttf/.otf)',
+          'Click derecho → Instalar para todos los usuarios',
+          'Esperar a que se completen las instalaciones',
+          'Reiniciar aplicaciones para ver cambios'
+        ]
+      },
+      'herramientas': {
+        title: 'HERRAMIENTAS DE PERSONALIZACIÓN',
+        description: 'Software para cambiar iconos, temas y personalizar completamente Windows.',
+        size: '45 MB',
+        system: 'Windows 10/11 64-bit',
+        icon: 'fas fa-tools',
+        color: 'linear-gradient(135deg, #F72585, #B5179E)',
+        instructions: [
+          'Descomprimir el archivo',
+          'Ejecutar "CustomizerSetup.exe" como administrador',
+          'Seguir asistente de instalación',
+          'Crear punto de restauración cuando se solicite',
+          'Reiniciar sistema para aplicar cambios'
+        ]
+      },
+      'sonidos': {
+        title: 'PACK DE SONIDOS DEL SISTEMA',
+        description: 'Efectos de sonido personalizados para notificaciones, inicio y eventos de Windows.',
+        size: '320 MB',
+        system: 'Windows 10/11',
+        icon: 'fas fa-volume-up',
+        color: 'linear-gradient(135deg, #FF9E00, #FF6D00)',
+        instructions: [
+          'Descomprimir el archivo',
+          'Ir a Configuración de Windows → Sonidos',
+          'Para cada evento, click en "Examinar"',
+          'Seleccionar el sonido deseado de la carpeta',
+          'Aplicar y guardar esquema de sonido'
+        ]
+      }
+    };
+
+    // Función para abrir modal
+    function abrirModal(tipo) {
+      const data = extrasData[tipo];
+      if (!data) return;
+      
+      // Actualizar contenido del modal
+      document.getElementById('modalExtraTitle').textContent = data.title;
+      document.getElementById('modalExtraDescription').textContent = data.description;
+      document.getElementById('modalExtraSize').textContent = data.size;
+      document.getElementById('modalExtraSystem').textContent = data.system;
+      
+      // Actualizar icono
+      const iconElement = document.getElementById('modalExtraIcon');
+      iconElement.innerHTML = `<i class="${data.icon}"></i>`;
+      iconElement.style.background = data.color;
+      
+      // Actualizar instrucciones
+      const instructionsList = document.getElementById('modalInstructions');
+      instructionsList.innerHTML = '';
+      data.instructions.forEach(instruction => {
+        const li = document.createElement('li');
+        li.textContent = instruction;
+        instructionsList.appendChild(li);
+      });
+      
+      // Actualizar enlaces (simulados - reemplazar con enlaces reales)
+      document.getElementById('linkMega').href = `https://mega.nz/file/example-${tipo}`;
+      document.getElementById('linkMediafire').href = `https://www.mediafire.com/file/example-${tipo}`;
+      document.getElementById('linkDrive').href = `https://drive.google.com/file/d/example-${tipo}/view`;
+      
+      // Mostrar modal
+      document.getElementById('downloadModal').style.display = 'flex';
+    }
+
+    // Función para cerrar modal
+    function cerrarModal() {
+      document.getElementById('downloadModal').style.display = 'none';
+    }
+
+    // Mostrar consejo aleatorio
+    const consejos = [
+      "💡 Tip: Crea un punto de restauración antes de personalizar system files",
+      "🎨 Para mejores resultados: usa fondos que combinen con tus iconos",
+      "⚡ Wallpaper Engine consume recursos: ajústalo según tu PC",
+      "🛡️ Siempre descarga de fuentes confiables como estas"
+    ];
+    
+    // Mostrar consejo después de 5 segundos
+    setTimeout(() => {
+      const consejoAleatorio = consejos[Math.floor(Math.random() * consejos.length)];
+      console.log(consejoAleatorio);
+    }, 5000);
+  </script>
+</body>
+</html>

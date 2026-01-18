@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KverSProject - Juegos PC</title>
+  <link rel="stylesheet" href="colorjuego.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Anuncio Superior -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <div class="announcement-badge">GAME OF THE YEAR</div>
+      <div class="announcement-text">¡Los mejores juegos para PC optimizados y 100% funcionales!</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-main">
+    <div class="header-container">
+      <div class="logo-section">
+        <div class="logo-container">
+          <img src="FOTOS/kversLogo.png" alt="Logo KverSProject">
+        </div>
+        <div class="logo-text">
+          <h1>KverSProject</h1>
+          <span>by Kvers (Adrian)</span>
+        </div>
+      </div>
+
+      <nav class="nav-main" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="emuladores.html"><i class="fas fa-cogs"></i> Emuladores</a></li>
+          <li><a href="celular.html"><i class="fas fa-mobile-alt"></i> Celulares</a></li>
+          <li><a href="juego.html" class="activo"><i class="fas fa-gamepad"></i> Juegos PC</a></li>
+          <li><a href="programas.html"><i class="fas fa-laptop-code"></i> Programas</a></li>
+          <li><a href="extra.html"><i class="fas fa-plus-circle"></i> Extra</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner Principal -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1><i class="fas fa-gamepad"></i> JUEGOS PARA PC</h1>
+      <p>Los mejores títulos optimizados, completos y listos para descargar. Sin límites, sin DRM.</p>
+      <div class="banner-stats">
+        <div class="stat">
+          <i class="fas fa-download"></i>
+          <span>100% Crackeados</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-bolt"></i>
+          <span>Optimizados</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-users"></i>
+          <span>Multijugador</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-trophy"></i>
+          <span>GOTY Edition</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros de Categorías -->
+  <section class="filters-section">
+    <div class="filters-container">
+      <h2><i class="fas fa-filter"></i> Filtrar por Género</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="action">Acción</button>
+        <button class="filter-btn" data-filter="adventure">Aventura</button>
+        <button class="filter-btn" data-filter="horror">Terror</button>
+        <button class="filter-btn" data-filter="simulation">Simulación</button>
+        <button class="filter-btn" data-filter="platformer">Plataformas</button>
+        <button class="filter-btn" data-filter="sandbox">Sandbox</button>
+        <button class="filter-btn" data-filter="multiplayer">Multijugador</button>
+      </div>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="gameSearch" placeholder="Buscar juego...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor de Juegos -->
+  <main class="games-container">
+    <div class="games-grid">
+      <!-- GEOMETRY DASH -->
+      <div class="game-card" data-category="platformer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge">RITMO</span>
+          <span class="game-size">95 MB</span>
+        </div>
+        <div class="game-icon">
+          <i class="fas fa-running"></i>
+        </div>
+        <h3 class="game-title">GEOMETRY DASH</h3>
+        <p class="game-description">Juego de ritmo y plataformas adictivo. Versión completa con todos los niveles.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>4.7</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2013</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('1')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- BALATRO -->
+      <div class="game-card" data-category="simulation" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #9b5de5;">ROGUELIKE</span>
+          <span class="game-size">85 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF6B6B, #4ECDC4);">
+          <i class="fas fa-dice"></i>
+        </div>
+        <h3 class="game-title">BALATRO</h3>
+        <p class="game-description">Póker roguelike adictivo. Mod con recursos ilimitados y todas las cartas.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2024</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('2')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- GTA 3 OPTIMIZADO -->
+      <div class="game-card" data-category="action sandbox" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #f15bb5;">OPEN WORLD</span>
+          <span class="game-size">1.2 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #7209B7, #3A0CA3);">
+          <i class="fas fa-car"></i>
+        </div>
+        <h3 class="game-title">GTA 3 OPTIMIZADO</h3>
+        <p class="game-description">Clásico de mundo abierto optimizado para PCs modernos. Texturas HD.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.2</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2001</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('3')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- HOLLOW KNIGHT -->
+      <div class="game-card" data-category="adventure platformer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #00bbf9;">METROIDVANIA</span>
+          <span class="game-size">2.8 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #00BBF9, #00F5D4);">
+          <i class="fas fa-bug"></i>
+        </div>
+        <h3 class="game-title">HOLLOW KNIGHT</h3>
+        <p class="game-description">Aventura metroidvania con arte impresionante. Edición completa con DLCs.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2017</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('4')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- LEGO ISLAND -->
+      <div class="game-card" data-category="adventure simulation" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #f72585;">LEGO</span>
+          <span class="game-size">650 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #F72585, #B5179E);">
+          <i class="fas fa-cube"></i>
+        </div>
+        <h3 class="game-title">LEGO ISLAND</h3>
+        <p class="game-description">Clásico de LEGO optimizado para Windows 10/11. Nostalgia garantizada.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.3</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 1997</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('5')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- GTA VICE CITY -->
+      <div class="game-card" data-category="action sandbox" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #ff9e00;">80's</span>
+          <span class="game-size">1.5 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF9E00, #FF6D00);">
+          <i class="fas fa-sun"></i>
+        </div>
+        <h3 class="game-title">GTA VICE CITY</h3>
+        <p class="game-description">Clásico de los 80s con soundtrack icónico. Versión HD optimizada.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2002</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('6')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- ROBLOX -->
+      <div class="game-card" data-category="sandbox multiplayer" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #FF595E;">MULTIJUGADOR</span>
+          <span class="game-size">280 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF595E, #FFCA3A);">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="game-title">ROBLOX STUDIO</h3>
+        <p class="game-description">Plataforma de creación de juegos. Versión completa sin límites.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.3</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2006</span>
+          <span><i class="fas fa-user-friends"></i> Online</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('7')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- CELESTE -->
+      <div class="game-card" data-category="platformer adventure" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #6A0572;">INDIE</span>
+          <span class="game-size">1.2 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #6A0572, #AB83A1);">
+          <i class="fas fa-mountain"></i>
+        </div>
+        <h3 class="game-title">CELESTE</h3>
+        <p class="game-description">Juego de plataformas indie aclamado. Historia emocionante y desafíos.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2018</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('8')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- CASTLE CRASHERS -->
+      <div class="game-card" data-category="action multiplayer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #2A9D8F;">CO-OP</span>
+          <span class="game-size">350 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #2A9D8F, #E9C46A);">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="game-title">CASTLE CRASHERS</h3>
+        <p class="game-description">Beat 'em up cooperativo para hasta 4 jugadores. Divertido y caótico.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2008</span>
+          <span><i class="fas fa-user-friends"></i> 4 Jugadores</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('9')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- THE FOREST -->
+      <div class="game-card" data-category="horror adventure" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #E76F51;">SURVIVAL</span>
+          <span class="game-size">5.2 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #E76F51, #F4A261);">
+          <i class="fas fa-tree"></i>
+        </div>
+        <h3 class="game-title">THE FOREST</h3>
+        <p class="game-description">Survival horror en primera persona. Construye, explora y sobrevive.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.2</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2018</span>
+          <span><i class="fas fa-user-friends"></i> Co-op</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('10')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- ANGRY BIRDS -->
+      <div class="game-card" data-category="simulation" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #264653;">CASUAL</span>
+          <span class="game-size">180 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #264653, #2A9D8F);">
+          <i class="fas fa-dove"></i>
+        </div>
+        <h3 class="game-title">ANGRY BIRDS</h3>
+        <p class="game-description">Clásico juego de física. Versión completa para PC con todos los niveles.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.3</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2009</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('11')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- FIVE NIGHTS 1-2-3 -->
+      <div class="game-card" data-category="horror" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #457B9D;">TERROR</span>
+          <span class="game-size">450 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #457B9D, #A8DADC);">
+          <i class="fas fa-ghost"></i>
+        </div>
+        <h3 class="game-title">FNAF 1, 2 & 3</h3>
+        <p class="game-description">Trilogía completa de terror. Sobrevive a las noches en la pizzería.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.1</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2014-2015</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('12')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- FIVE NIGHTS 4 -->
+      <div class="game-card" data-category="horror" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #E63946;">NIGHTMARE</span>
+          <span class="game-size">320 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #E63946, #F1FAEE);">
+          <i class="fas fa-bed"></i>
+        </div>
+        <h3 class="game-title">FIVE NIGHTS 4</h3>
+        <p class="game-description">La parte más terrorífica de la saga. En tu propia habitación.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2015</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('13')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- TERRARIA -->
+      <div class="game-card" data-category="sandbox adventure" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #FF9F1C;">SANDBOX</span>
+          <span class="game-size">250 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF9F1C, #FFBF69);">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h3 class="game-title">TERRARIA</h3>
+        <p class="game-description">Aventura sandbox 2D. Excava, construye y lucha. Edición completa.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2011</span>
+          <span><i class="fas fa-user-friends"></i> Co-op</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('14')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- METAL SLUG -->
+      <div class="game-card" data-category="action" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #4361EE;">ARCADE</span>
+          <span class="game-size">180 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #4361EE, #3A0CA3);">
+          <i class="fas fa-gun"></i>
+        </div>
+        <h3 class="game-title">METAL SLUG</h3>
+        <p class="game-description">Clásico run and gun arcade. Gráficos pixel art y acción sin parar.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 1996</span>
+          <span><i class="fas fa-user-friends"></i> 2 Jugadores</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('15')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- GARRY'S MOD -->
+      <div class="game-card" data-category="sandbox multiplayer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #4CC9F0;">PHYSICS</span>
+          <span class="game-size">3.5 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #4CC9F0, #4895EF);">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3 class="game-title">GARRY'S MOD</h3>
+        <p class="game-description">Sandbox de física sin objetivos. Crea lo que imagines con miles de mods.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2006</span>
+          <span><i class="fas fa-user-friends"></i> Multiplayer</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('16')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- SUPERMARKET SIMULATOR -->
+      <div class="game-card" data-category="simulation" data-rating="4">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #7209B7;">SIMULACIÓN</span>
+          <span class="game-size">1.8 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #7209B7, #560BAD);">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <h3 class="game-title">SUPERMARKET SIMULATOR</h3>
+        <p class="game-description">Administra tu propio supermercado. Gestiona empleados, stock y finanzas.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <span>4.3</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2023</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('17')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- SKLAUNCHER MINECRAFT -->
+      <div class="game-card" data-category="sandbox multiplayer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #3A0CA3;">FREE</span>
+          <span class="game-size">280 MB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #3A0CA3, #4361EE);">
+          <i class="fas fa-cube"></i>
+        </div>
+        <h3 class="game-title">SKLAUNCHER MINECRAFT</h3>
+        <p class="game-description">Launcher alternativo para Minecraft. Juega gratis con mods y skins.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2024</span>
+          <span><i class="fas fa-user-friends"></i> Online</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('18')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- OUTLAST -->
+      <div class="game-card" data-category="horror" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #F72585;">SURVIVAL</span>
+          <span class="game-size">5.5 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #F72585, #B5179E);">
+          <i class="fas fa-video"></i>
+        </div>
+        <h3 class="game-title">OUTLAST</h3>
+        <p class="game-description">Survival horror de infiltración. Solo tienes una cámara y mucho miedo.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2013</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('19')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- GTA SAN ANDREAS -->
+      <div class="game-card" data-category="action sandbox" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #FF6B6B;">90's</span>
+          <span class="game-size">4.2 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF6B6B, #4ECDC4);">
+          <i class="fas fa-gangster"></i>
+        </div>
+        <h3 class="game-title">GTA SAN ANDREAS</h3>
+        <p class="game-description">El mejor GTA de la historia. Versión definitiva con mods gráficos.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2004</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('20')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- LEFT 4 DEAD 2 -->
+      <div class="game-card" data-category="action multiplayer" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #FF9E00;">ZOMBIES</span>
+          <span class="game-size">7.5 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #FF9E00, #FF6D00);">
+          <i class="fas fa-skull-crossbones"></i>
+        </div>
+        <h3 class="game-title">LEFT 4 DEAD 2</h3>
+        <p class="game-description">Cooperativo zombie para 4 jugadores. Mods y servidores comunitarios.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2009</span>
+          <span><i class="fas fa-user-friends"></i> 4 Jugadores</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('21')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- LITTLE NIGHTMARES -->
+      <div class="game-card" data-category="horror adventure" data-rating="5">
+        <div class="game-card-header">
+          <span class="game-badge" style="background: #6A0572;">ATMOSPHERIC</span>
+          <span class="game-size">3.8 GB</span>
+        </div>
+        <div class="game-icon" style="background: linear-gradient(135deg, #6A0572, #AB83A1);">
+          <i class="fas fa-child"></i>
+        </div>
+        <h3 class="game-title">LITTLE NIGHTMARES</h3>
+        <p class="game-description">Aventura de terror atmosférico. Escapa de pesadillas en un mundo extraño.</p>
+        <div class="game-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>5.0</span>
+        </div>
+        <div class="game-info">
+          <span><i class="fas fa-calendar-alt"></i> 2017</span>
+          <span><i class="fas fa-user-friends"></i> 1 Jugador</span>
+        </div>
+        <button class="game-btn" onclick="abrirModal('22')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Instrucciones de Instalación -->
+  <section class="instructions-section">
+    <div class="instructions-container">
+      <h2><i class="fas fa-info-circle"></i> ¿Cómo Instalar los Juegos?</h2>
+      <div class="instructions-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Desactivar Antivirus</h3>
+          <p>Desactiva Windows Defender temporalmente. Los cracks son falsos positivos.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Extraer Archivos</h3>
+          <p>Usa WinRAR o 7-Zip para extraer el juego. Contraseña común: "kversproject"</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Instalar/Configurar</h3>
+          <p>Sigue el instalador o lee el archivo README.txt para instrucciones específicas.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>¡Jugar!</h3>
+          <p>Ejecuta el .exe principal. Algunos juegos requieren configurar gráficos primero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Descarga -->
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-download"></i> DESCARGAR JUEGO</h3>
+        <button class="modal-close" onclick="cerrarModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="game-modal-info">
+          <div class="modal-game-icon" id="modalGameIcon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <div>
+            <h4 id="modalGameTitle">GEOMETRY DASH</h4>
+            <p id="modalGameDescription">Juego de ritmo y plataformas adictivo</p>
+            <div class="modal-game-details">
+              <span><i class="fas fa-hdd"></i> <strong>Tamaño:</strong> <span id="modalGameSize">95 MB</span></span>
+              <span><i class="fas fa-user-friends"></i> <strong>Jugadores:</strong> <span id="modalGamePlayers">1</span></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="download-options">
+          <a id="linkMega" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-mega"></i>
+              <div>
+                <strong>MEGA</strong>
+                <span class="size">Alta velocidad</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkMediafire" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fas fa-cloud-download-alt"></i>
+              <div>
+                <strong>MediaFire</strong>
+                <span class="size">Sin límites</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkdrive" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-google-drive"></i>
+              <div>
+                <strong>Google Drive</strong>
+                <span class="size">Directo</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+        </div>
+        
+        <div class="modal-requirements">
+          <h4><i class="fas fa-list-check"></i> Requisitos Mínimos</h4>
+          <ul id="modalRequirements">
+            <li>Windows 7/8/10/11</li>
+            <li>2 GB RAM</li>
+            <li>500 MB espacio libre</li>
+            <li>Tarjeta gráfica básica</li>
+          </ul>
+        </div>
+        
+        <div class="modal-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p><strong>IMPORTANTE:</strong> Desactiva tu antivirus antes de instalar. Los cracks son detectados como falsos positivos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="social-section">
+    <h3>Comunidad Gaming</h3>
+    <p>Únete a nuestra comunidad para soporte y jugar juntos</p>
+    <div class="social-grid">
+      <a href="https://discord.gg/rTmJSh4S" target="_blank" class="social-icon social-discord">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/51913550781" target="_blank" class="social-icon social-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579314076255" target="_blank" class="social-icon social-facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/dian_estampados" target="_blank" class="social-icon social-instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="FOTOS/kversLogo.png" alt="KverSProject Logo">
+        <div class="footer-text">
+          <h4>KverSProject - Juegos PC</h4>
+          <p>by Kvers (Adrian)</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="#modal" onclick="abrirModal('1')">Descargas</a>
+        <a href="https://discord.gg/rTmJSh4S" target="_blank">Soporte</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 KverSProject | Juegos para fines educativos y personales
+      </div>
+    </div>
+  </footer>
+
+  <script src="linkjuego.js"></script>
+  <script>
+    // Menú móvil
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('main-nav').classList.toggle('active');
+    });
+
+    // Filtrado de juegos
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remover activo de todos los botones
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        // Activar el botón clickeado
+        this.classList.add('active');
+        
+        const filter = this.getAttribute('data-filter');
+        const games = document.querySelectorAll('.game-card');
+        
+        games.forEach(game => {
+          if (filter === 'all' || game.getAttribute('data-category').includes(filter)) {
+            game.style.display = 'block';
+            setTimeout(() => {
+              game.style.opacity = '1';
+              game.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            game.style.opacity = '0';
+            game.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              game.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Búsqueda de juegos
+    document.getElementById('gameSearch').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const games = document.querySelectorAll('.game-card');
+      
+      games.forEach(game => {
+        const title = game.querySelector('.game-title').textContent.toLowerCase();
+        const description = game.querySelector('.game-description').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+          game.style.display = 'block';
+          setTimeout(() => {
+            game.style.opacity = '1';
+            game.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          game.style.opacity = '0';
+          game.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            game.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+
+    // Animación de entrada de tarjetas
+    document.addEventListener('DOMContentLoaded', function() {
+      const games = document.querySelectorAll('.game-card');
+      games.forEach((game, index) => {
+        setTimeout(() => {
+          game.style.opacity = '1';
+          game.style.transform = 'translateY(0)';
+        }, index * 50);
+      });
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('downloadModal');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    });
+  </script>
+</body>
+</html>

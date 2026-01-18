@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KverSProject - Emuladores</title>
+  <link rel="stylesheet" href="coloremulador.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Anuncio Superior -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <div class="announcement-badge">EMULACIÓN</div>
+      <div class="announcement-text">¡Emula Android, consolas retro y más en tu PC!</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-main">
+    <div class="header-container">
+      <div class="logo-section">
+        <div class="logo-container">
+          <img src="FOTOS/kversLogo.png" alt="Logo KverSProject">
+        </div>
+        <div class="logo-text">
+          <h1>KverSProject</h1>
+          <span>by Kvers (Adrian)</span>
+        </div>
+      </div>
+
+      <nav class="nav-main" id="main-nav">
+        <ul class="nav-menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="emuladores.html" class="activo"><i class="fas fa-cogs"></i> Emuladores</a></li>
+          <li><a href="celular.html"><i class="fas fa-mobile-alt"></i> Celulares</a></li>
+          <li><a href="juego.html"><i class="fas fa-gamepad"></i> Juegos PC</a></li>
+          <li><a href="programas.html"><i class="fas fa-laptop-code"></i> Programas</a></li>
+          <li><a href="extra.html"><i class="fas fa-plus-circle"></i> Extra</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner Principal -->
+  <section class="page-banner">
+    <div class="banner-content">
+      <h1><i class="fas fa-cogs"></i> EMULADORES PARA PC</h1>
+      <p>Ejecuta Android, juegos retro y sistemas operativos en tu computadora. Optimizados y 100% funcionales.</p>
+      <div class="banner-stats">
+        <div class="stat">
+          <i class="fas fa-bolt"></i>
+          <span>Optimizados</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-shield-alt"></i>
+          <span>Sin Bloatware</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-gamepad"></i>
+          <span>Gaming</span>
+        </div>
+        <div class="stat">
+          <i class="fas fa-tachometer-alt"></i>
+          <span>Rendimiento</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías de Emuladores -->
+  <section class="categories-section">
+    <div class="categories-container">
+      <h2><i class="fas fa-filter"></i> Tipos de Emulación</h2>
+      <div class="categories-grid">
+        <div class="category-card" data-category="android">
+          <div class="category-icon">
+            <i class="fab fa-android"></i>
+          </div>
+          <h3>Android</h3>
+          <p>Emula Android en PC para juegos y apps móviles</p>
+        </div>
+        <div class="category-card" data-category="retro">
+          <div class="category-icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Consolas Retro</h3>
+          <p>PS1, N64, GameBoy, SNES y más clásicos</p>
+        </div>
+        <div class="category-card" data-category="arcade">
+          <div class="category-icon">
+            <i class="fas fa-joystick"></i>
+          </div>
+          <h3>Arcade</h3>
+          <p>Máquinas recreativas y juegos de salón</p>
+        </div>
+        <div class="category-card" data-category="handheld">
+          <div class="category-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Portátiles</h3>
+          <p>PSP, Nintendo DS, GameBoy Advance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparativa de Emuladores Android -->
+  <section class="comparison-section">
+    <div class="comparison-container">
+      <h2><i class="fas fa-chart-bar"></i> Comparativa de Emuladores Android</h2>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Emulador</th>
+              <th>Rendimiento</th>
+              <th>RAM</th>
+              <th>Gaming</th>
+              <th>Compatibilidad</th>
+              <th>Descarga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>BlueStacks 5</strong></td>
+              <td><div class="rating-bar" style="width: 95%;"></div>95%</td>
+              <td>4 GB mínimo</td>
+              <td><i class="fas fa-check-circle" style="color: #00ff88;"></i> Excelente</td>
+              <td>Muy Alta</td>
+              <td><button class="table-btn" onclick="abrirModal('1')"><i class="fas fa-download"></i> Descargar</button></td>
+            </tr>
+            <tr>
+              <td><strong>LDPlayer 9</strong></td>
+              <td><div class="rating-bar" style="width: 90%;"></div>90%</td>
+              <td>2 GB mínimo</td>
+              <td><i class="fas fa-check-circle" style="color: #00ff88;"></i> Óptimo</td>
+              <td>Alta</td>
+              <td><button class="table-btn" onclick="abrirModal('2')"><i class="fas fa-download"></i> Descargar</button></td>
+            </tr>
+            <tr>
+              <td><strong>NoxPlayer 7</strong></td>
+              <td><div class="rating-bar" style="width: 85%;"></div>85%</td>
+              <td>1.5 GB mínimo</td>
+              <td><i class="fas fa-check-circle" style="color: #00ff88;"></i> Bueno</td>
+              <td>Media-Alta</td>
+              <td><button class="table-btn" onclick="abrirModal('3')"><i class="fas fa-download"></i> Descargar</button></td>
+            </tr>
+            <tr>
+              <td><strong>Memu Play 9</strong></td>
+              <td><div class="rating-bar" style="width: 88%;"></div>88%</td>
+              <td>2 GB mínimo</td>
+              <td><i class="fas fa-check-circle" style="color: #00ff88;"></i> Muy Bueno</td>
+              <td>Alta</td>
+              <td><button class="table-btn" onclick="abrirModal('4')"><i class="fas fa-download"></i> Descargar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenedor de Emuladores -->
+  <main class="emulators-container">
+    <div class="emulators-grid">
+      <!-- BlueStacks -->
+      <div class="emulator-card" data-category="android">
+        <div class="emulator-card-header">
+          <span class="emulator-badge">ANDROID</span>
+          <span class="emulator-version">v5.20.101</span>
+        </div>
+        <div class="emulator-icon">
+          <i class="fab fa-android"></i>
+        </div>
+        <h3 class="emulator-title">BLUESTACKS 5</h3>
+        <p class="emulator-description">El emulador Android más rápido y estable. Optimizado para gaming con teclado y ratón.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-memory"></i> Bajo consumo RAM</span>
+          <span><i class="fas fa-gamepad"></i> Gaming optimizado</span>
+          <span><i class="fas fa-sync-alt"></i> Multi-instancia</span>
+          <span><i class="fas fa-keyboard"></i> Controles personalizados</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 5.2 GB</span>
+          <span><i class="fas fa-microchip"></i> 4 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 7+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('1')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- LDPlayer -->
+      <div class="emulator-card" data-category="android">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #9b5de5;">LIGERO</span>
+          <span class="emulator-version">v9.0.57</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #FF6B6B, #4ECDC4);">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <h3 class="emulator-title">LDPLAYER 9</h3>
+        <p class="emulator-description">Emulador ligero y rápido. Perfecto para PCs con recursos limitados.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-bolt"></i> Arranque rápido</span>
+          <span><i class="fas fa-mobile-alt"></i> Android 9</span>
+          <span><i class="fas fa-sync"></i> 120 FPS</span>
+          <span><i class="fas fa-cogs"></i> Macro scripting</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 1.8 GB</span>
+          <span><i class="fas fa-microchip"></i> 2 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 10+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('2')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- NoxPlayer -->
+      <div class="emulator-card" data-category="android">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #f15bb5;">PERSONALIZABLE</span>
+          <span class="emulator-version">v7.0.5.9</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #7209B7, #3A0CA3);">
+          <i class="fas fa-sliders-h"></i>
+        </div>
+        <h3 class="emulator-title">NOXPLAYER 7</h3>
+        <p class="emulator-description">Altamente personalizable con soporte para root y scripts avanzados.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-user-shield"></i> Root incluido</span>
+          <span><i class="fas fa-code"></i> Soporte scripts</span>
+          <span><i class="fas fa-video"></i> Grabación</span>
+          <span><i class="fas fa-expand-arrows-alt"></i> Ventana flexible</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 2.5 GB</span>
+          <span><i class="fas fa-microchip"></i> 1.5 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 7+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('3')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Memu Play -->
+      <div class="emulator-card" data-category="android">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #00bbf9;">ESTABLE</span>
+          <span class="emulator-version">v9.0.3</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #00BBF9, #00F5D4);">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="emulator-title">MEMU PLAY 9</h3>
+        <p class="emulator-description">Excelente estabilidad y compatibilidad. Ideal para juegos exigentes.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-star"></i> Alta compatibilidad</span>
+          <span><i class="fas fa-camera"></i> Screenshot</span>
+          <span><i class="fas fa-desktop"></i> Modo escritorio</span>
+          <span><i class="fas fa-network-wired"></i> VPN integrado</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 3.2 GB</span>
+          <span><i class="fas fa-microchip"></i> 2 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 8+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('4')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- RetroArch -->
+      <div class="emulator-card" data-category="retro">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #f72585;">MULTI-CONSOLA</span>
+          <span class="emulator-version">v1.17.0</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #F72585, #B5179E);">
+          <i class="fas fa-history"></i>
+        </div>
+        <h3 class="emulator-title">RETROARCH</h3>
+        <p class="emulator-description">Frontend unificado para emular +50 consolas retro. Altamente personalizable.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-gamepad"></i> +50 consolas</span>
+          <span><i class="fas fa-paint-brush"></i> Shaders gráficos</span>
+          <span><i class="fas fa-save"></i> Save states</span>
+          <span><i class="fas fa-trophy"></i> Logros RetroAchievements</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 350 MB</span>
+          <span><i class="fas fa-microchip"></i> 512 MB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Multiplataforma</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('5')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- PCSX2 -->
+      <div class="emulator-card" data-category="retro">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #ff9e00;">PS2</span>
+          <span class="emulator-version">v1.7.0</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #FF9E00, #FF6D00);">
+          <i class="fab fa-playstation"></i>
+        </div>
+        <h3 class="emulator-title">PCSX2</h3>
+        <p class="emulator-description">Emulador de PlayStation 2. Soporte completo para juegos en HD.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-tv"></i> 4K/HD</span>
+          <span><i class="fas fa-compact-disc"></i> ISO/Disco físico</span>
+          <span><i class="fas fa-gamepad"></i> DualShock 2</span>
+          <span><i class="fas fa-wrench"></i> Cheats</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 120 MB</span>
+          <span><i class="fas fa-microchip"></i> 4 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 10+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('6')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Dolphin -->
+      <div class="emulator-card" data-category="retro">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #FF595E;">GAMECUBE/WII</span>
+          <span class="emulator-version">v5.0</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #FF595E, #FFCA3A);">
+          <i class="fas fa-dolphin"></i>
+        </div>
+        <h3 class="emulator-title">DOLPHIN</h3>
+        <p class="emulator-description">Emulador de Nintendo GameCube y Wii. Alta compatibilidad y rendimiento.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-gamepad"></i> Wiimote/Wii U Pro</span>
+          <span><i class="fas fa-tv"></i> 4K/HD</span>
+          <span><i class="fas fa-network-wired"></i> Netplay</span>
+          <span><i class="fas fa-save"></i> Save states</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 45 MB</span>
+          <span><i class="fas fa-microchip"></i> 2 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 7+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('7')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+
+      <!-- Citra -->
+      <div class="emulator-card" data-category="handheld">
+        <div class="emulator-card-header">
+          <span class="emulator-badge" style="background: #6A0572;">3DS</span>
+          <span class="emulator-version">v2024</span>
+        </div>
+        <div class="emulator-icon" style="background: linear-gradient(135deg, #6A0572, #AB83A1);">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <h3 class="emulator-title">CITRA</h3>
+        <p class="emulator-description">Emulador de Nintendo 3DS. Soporte completo para juegos 3D.</p>
+        <div class="emulator-features">
+          <span><i class="fas fa-eye"></i> 3D estereoscópico</span>
+          <span><i class="fas fa-tv"></i> Resolución aumentada</span>
+          <span><i class="fas fa-save"></i> Save states</span>
+          <span><i class="fas fa-camera"></i> Screenshot</span>
+        </div>
+        <div class="emulator-info">
+          <span><i class="fas fa-hdd"></i> 85 MB</span>
+          <span><i class="fas fa-microchip"></i> 4 GB RAM mínima</span>
+          <span><i class="fas fa-windows"></i> Windows 8+</span>
+        </div>
+        <button class="emulator-btn" onclick="abrirModal('8')">
+          <i class="fas fa-download"></i> DESCARGAR
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Guía de Configuración -->
+  <section class="guide-section">
+    <div class="guide-container">
+      <h2><i class="fas fa-book"></i> Guía Rápida de Configuración</h2>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-number">1</div>
+          <h3>Virtualización Activada</h3>
+          <p>Activa Intel VT-x/AMD-V en BIOS/UEFI para máximo rendimiento.</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">2</div>
+          <h3>Drivers Actualizados</h3>
+          <p>Instala los últimos drivers de gráficos (NVIDIA/AMD/Intel).</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">3</div>
+          <h3>Asignar Recursos</h3>
+          <p>Asigna 4-8 GB RAM y 2-4 núcleos de CPU en ajustes.</p>
+        </div>
+        <div class="guide-step">
+          <div class="step-number">4</div>
+          <h3>Configurar Controles</h3>
+          <p>Personaliza teclado/ratón/mando para cada juego.</p>
+        </div>
+      </div>
+      <div class="guide-tips">
+        <h3><i class="fas fa-lightbulb"></i> Tips para Mejor Rendimiento</h3>
+        <ul>
+          <li><strong>Cerrar programas innecesarios</strong> antes de emular</li>
+          <li><strong>Usar SSD</strong> para almacenamiento de juegos</li>
+          <li><strong>Desactivar antivirus temporalmente</strong> durante instalación</li>
+          <li><strong>Actualizar Windows</strong> a la última versión</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Descarga -->
+  <div class="modal" id="downloadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-download"></i> DESCARGAR EMULADOR</h3>
+        <button class="modal-close" onclick="cerrarModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="emulator-modal-info">
+          <div class="modal-emulator-icon" id="modalEmulatorIcon">
+            <i class="fab fa-android"></i>
+          </div>
+          <div>
+            <h4 id="modalEmulatorTitle">BLUESTACKS 5</h4>
+            <p id="modalEmulatorDescription">El emulador Android más rápido y estable</p>
+            <div class="modal-emulator-details">
+              <span><i class="fas fa-hdd"></i> <strong>Tamaño:</strong> <span id="modalEmulatorSize">5.2 GB</span></span>
+              <span><i class="fas fa-microchip"></i> <strong>RAM:</strong> <span id="modalEmulatorRAM">4 GB mínima</span></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="download-options">
+          <a id="linkMega" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-mega"></i>
+              <div>
+                <strong>MEGA</strong>
+                <span class="size">Alta velocidad</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkMediafire" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fas fa-cloud-download-alt"></i>
+              <div>
+                <strong>MediaFire</strong>
+                <span class="size">Sin límites</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+          
+          <a id="linkDrive" href="#" target="_blank" class="download-option">
+            <div class="provider">
+              <i class="fab fa-google-drive"></i>
+              <div>
+                <strong>Google Drive</strong>
+                <span class="size">Directo</span>
+              </div>
+            </div>
+            <div class="download-btn">
+              <i class="fas fa-download"></i>
+              DESCARGAR
+            </div>
+          </a>
+        </div>
+        
+        <div class="modal-requirements">
+          <h4><i class="fas fa-list-check"></i> Requisitos del Sistema</h4>
+          <ul id="modalRequirements">
+            <li>Windows 7/8/10/11 (64-bit)</li>
+            <li>4 GB RAM mínimo (8 GB recomendado)</li>
+            <li>5 GB espacio libre en SSD</li>
+            <li>Intel VT-x/AMD-V activado en BIOS</li>
+            <li>DirectX 11 o superior</li>
+          </ul>
+        </div>
+        
+        <div class="modal-warning">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p><strong>IMPORTANTE:</strong> Desactiva Windows Defender temporalmente durante la instalación. No es malware.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="social-section">
+    <h3>Soporte y Comunidad</h3>
+    <p>¿Problemas con la configuración? Únete a nuestra comunidad</p>
+    <div class="social-grid">
+      <a href="https://discord.gg/rTmJSh4S" target="_blank" class="social-icon social-discord">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a href="https://wa.me/51913550781" target="_blank" class="social-icon social-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579314076255" target="_blank" class="social-icon social-facebook">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/dian_estampados" target="_blank" class="social-icon social-instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="FOTOS/kversLogo.png" alt="KverSProject Logo">
+        <div class="footer-text">
+          <h4>KverSProject - Emuladores</h4>
+          <p>by Kvers (Adrian)</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="#modal" onclick="abrirModal('1')">Descargas</a>
+        <a href="https://discord.gg/rTmJSh4S" target="_blank">Soporte</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 KverSProject | Emuladores para fines educativos
+      </div>
+    </div>
+  </footer>
+
+  <script src="linkemulador.js"></script>
+  <script>
+    // Menú móvil
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('main-nav').classList.toggle('active');
+    });
+
+    // Filtrado por categoría
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        const emulators = document.querySelectorAll('.emulator-card');
+        
+        // Remover activo de todas las categorías
+        document.querySelectorAll('.category-card').forEach(c => {
+          c.classList.remove('active');
+        });
+        
+        // Activar categoría clickeada
+        this.classList.add('active');
+        
+        emulators.forEach(emulator => {
+          if (category === 'all' || emulator.getAttribute('data-category').includes(category)) {
+            emulator.style.display = 'block';
+            setTimeout(() => {
+              emulator.style.opacity = '1';
+              emulator.style.transform = 'translateY(0)';
+            }, 10);
+          } else {
+            emulator.style.opacity = '0';
+            emulator.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              emulator.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Animación de entrada de tarjetas
+    document.addEventListener('DOMContentLoaded', function() {
+      const emulators = document.querySelectorAll('.emulator-card');
+      emulators.forEach((emulator, index) => {
+        setTimeout(() => {
+          emulator.style.opacity = '1';
+          emulator.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('downloadModal');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    });
+
+    // Tabla de comparación - efectos hover
+    document.querySelectorAll('.table-btn').forEach(btn => {
+      btn.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05)';
+      });
+      
+      btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+    });
+
+    // Mostrar consejo aleatorio
+    const consejos = [
+      "💡 Tip: Activa la virtualización en BIOS para mejor rendimiento",
+      "🎮 Para gaming: Asigna más RAM y CPU al emulador",
+      "⚡ Usa SSD para reducir tiempos de carga",
+      "🛡️ Desactiva temporalmente el antivirus durante la instalación"
+    ];
+    
+    // Mostrar consejo después de 5 segundos
+    setTimeout(() => {
+      const consejoAleatorio = consejos[Math.floor(Math.random() * consejos.length)];
+      console.log(consejoAleatorio);
+    }, 5000);
+  </script>
+</body>
+</html>
